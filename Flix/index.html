@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Netflix Mejorado</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+  <header class="header">
+
+    <h1>¡Bienvenidos a CEUflix!</h1>
+    <p>Millones de películas, programas de televisión y personajes por descubrir.</p>
+    <!-- Buscador por género -->
+    <div class="search-section">
+      <h2>Buscar por Género</h2>
+      <input id="genreSearchBar" type="text" placeholder="Buscar por género..." />
+      <button id="genreSearchButton">Buscar</button>
+    </div>
+
+    <!-- Buscador por películas -->
+    <div class="search-section">
+      <h2>Buscar Películas</h2>
+      <input id="movieSearchBar" type="text" placeholder="Buscar por película..." />
+      <button id="movieSearchButton">Buscar</button>
+    </div>
+
+    <!-- Botones para funciones principales -->
+    <div class="buttons">
+      <button id="view-collection-button">Ver Colección</button>
+      <button id="reset-collection-button">Restablecer Colección</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Carrusel para mostrar la colección -->
+    <section id="trending">
+      <h2>Mi Colección</h2>
+      <div class="swiper-container">
+        <div class="swiper-wrapper" id="movies-container"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Sección dinámica para mostrar los detalles de una película -->
+    <section id="movie-details" class="hidden">
+      <button id="back-button" class="back-button">Volver al Inicio</button>
+      <div id="movie-details-container">
+        <!-- Aquí se insertarán los detalles dinámicamente -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
